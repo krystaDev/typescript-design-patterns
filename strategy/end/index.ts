@@ -6,10 +6,10 @@ import {logSeparator} from "../../utils";
 
 const myDog = new PerfectDog();
 
-logSeparator('Dog story');
+logSeparator('New dog');
 myDog.bark();
 myDog.doTrick();
 myDog.run();
-logSeparator('Small accident...');
+logSeparator('Small accident of Dog');
 myDog.changeRunInterface(new NoFootNoRun());
 myDog.run();
