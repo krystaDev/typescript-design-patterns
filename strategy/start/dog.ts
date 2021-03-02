@@ -7,6 +7,6 @@ export abstract class Dog {
   }
 
   public run() {
-    console.log('Dog is running cat');
+    console.log('Dog is catching cat');
   }
 }

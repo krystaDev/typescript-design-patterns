@@ -19,4 +19,5 @@ wildDog.doTrick();
 
 logSeparator('TOY DOG');
 toyDog.bark();
+toyDog.run();
 toyDog.doTrick();
