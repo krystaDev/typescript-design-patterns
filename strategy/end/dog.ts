@@ -7,6 +7,12 @@ export abstract class Dog {
   protected runInterface: RunInterface;
   protected trickInterface: TrickInterface;
 
+  protected constructor(bark: BarkInterface, run: RunInterface, trick: TrickInterface) {
+    this.barkInterface = bark;
+    this.runInterface = run;
+    this.trickInterface = trick;
+  }
+
   public bark() {
     this.barkInterface.bark();
   }

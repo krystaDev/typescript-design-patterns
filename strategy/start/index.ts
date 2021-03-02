@@ -11,10 +11,12 @@ const toyDog = new ToyDog();
 
 logSeparator('TRAINED DOG');
 trainedDog.bark();
+trainedDog.run();
 trainedDog.doTrick();
 
 logSeparator('WILD DOG');
 wildDog.bark();
+wildDog.run();
 wildDog.doTrick();
 
 logSeparator('TOY DOG');

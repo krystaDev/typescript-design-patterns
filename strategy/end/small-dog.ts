@@ -5,10 +5,6 @@ import {RetrieveTrick} from "./trick/retrieve-trick";
 
 export class SmallDog extends Dog {
   constructor() {
-    super();
-
-    this.runInterface = new NormalRun();
-    this.barkInterface = new SilentBark();
-    this.trickInterface = new RetrieveTrick();
+    super(new SilentBark(), new NormalRun(), new RetrieveTrick());
   }
 }

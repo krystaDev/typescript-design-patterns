@@ -5,10 +5,6 @@ import {JumpTrick} from "./trick/jump-trick";
 
 export class PerfectDog extends Dog {
   constructor() {
-    super();
-
-    this.runInterface = new NormalRun();
-    this.barkInterface = new NoBark();
-    this.trickInterface = new JumpTrick();
+    super(new NoBark(), new NormalRun(), new JumpTrick());
   }
 }
