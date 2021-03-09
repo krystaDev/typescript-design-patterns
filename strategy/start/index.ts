@@ -9,17 +9,17 @@ const trainedDog = new TrainedDog();
 const wildDog = new WildDog();
 const toyDog = new ToyDog();
 
-logSeparator('TRAINED DOG');
+console.log('TRAINED DOG');
 trainedDog.bark();
 trainedDog.run();
 trainedDog.doTrick();
 
-logSeparator('WILD DOG');
+console.log('WILD DOG');
 wildDog.bark();
 wildDog.run();
 wildDog.doTrick();
 
-logSeparator('TOY DOG');
+console.log('TOY DOG');
 toyDog.bark();
 toyDog.run();
 toyDog.doTrick();

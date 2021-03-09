@@ -5,5 +5,4 @@ export class TrainedDog extends Dog {
   public doTrick() {
     console.log('Roll');
   }
-
 }
