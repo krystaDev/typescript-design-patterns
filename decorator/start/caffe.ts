@@ -15,7 +15,7 @@ export const prices = [
 export abstract class Caffe {
   private readonly cost =  {};
   private readonly description;
-  private additions = [];
+  private additions : Additions[] = [];
 
   protected constructor(description: string) {
     this.description = description;
