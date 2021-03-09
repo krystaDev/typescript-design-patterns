@@ -75,7 +75,7 @@ toyDog.doTrick();
 <dt>oraz wynik wykonania naszego przykładu</dt>
 <dd>
 
-```typescript
+```
 TRAINED DOG
 HAU HAU
 Dog is catching cat
