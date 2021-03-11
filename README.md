@@ -94,7 +94,11 @@ Make some funny noise - to jest ok - wykonuje śmieszny dźwięk
 
 </dl>
 
-**Jak widzimy, nie wszystkie pieski mogą wykonywać czynności w ten sam z góry określony sposób. Zatem, jak zaprojektów obiekty aby nie musieć powtarzać fragmentów kodu odpowiedzialne za te same zachowanie danej rasy/rodzaju pieska, jednocześnie pozwalajac na </dt>**
+**Jak widzimy, nie wszystkie pieski mogą wykonywać czynności w ten sam z góry określony sposób. Zatem,
+jak zaprojektów obiekty aby nie musieć powtarzać fragmentów kodu odpowiedzialne za te same zachowanie
+danej rasy/rodzaju pieska, jednocześnie pozwalajac na rozbudowe o kolejne zachowania</dt>**
+
+
 
 
 
