@@ -1,6 +1,6 @@
-import {Pizza} from "../pizza-base";
+import {Pizza} from "../../pizza-base";
 
-export class AmericanCheesePizza extends Pizza {
+export class AmericanSeaFoodPizza extends Pizza {
 
   constructor() {
     super();
