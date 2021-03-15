@@ -1,15 +1,12 @@
 import {Pizza} from "../../pizza-abstract";
+import {IProductsFactory} from "../../products-factory-interface";
 
 export class AmericanSeaFoodPizza extends Pizza {
 
-  constructor() {
-    super();
+  constructor(factory: IProductsFactory) {
+    super(factory);
 
     this.name = 'American cheese pizza with sauce barbecue';
-    this.sauce = 'Sauce barbecue';
-    this.dough = 'Fat dough';
-
-    this.extras.push('Cheese mozzarella');
   }
 
   slice() {

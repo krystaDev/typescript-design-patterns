@@ -1,15 +1,11 @@
 import {Pizza} from "../../pizza-abstract";
+import {IProductsFactory} from "../../products-factory-interface";
 
 export class ItalianPepperoniPizza extends Pizza {
-  constructor() {
-    super();
+  constructor(factory: IProductsFactory) {
+    super(factory);
 
     this.name = 'Italian pepperoni pizza with hot olive oil';
-    this.sauce = 'Hot olive oil';
-    this.dough = 'Slight shortbread dough';
-
-    this.extras.push('Pepperoni');
-    this.extras.push('Italian Parma Ham');
   }
 
 }

@@ -1,14 +1,13 @@
 import {Pizza} from "../../pizza-abstract";
+import {IProductsFactory} from "../../products-factory-interface";
 
 export class ItalianCheesePizza extends Pizza {
-  constructor() {
-    super();
+  constructor(factory: IProductsFactory) {
+    super(factory);
 
     this.name = 'Italian cheese pizza with sauce marinara';
-    this.sauce = 'Sos Marinara';
-    this.dough = 'Slight shortbread dough';
-
-    this.extras.push('Cheese Reggiano');
   }
+
+
 
 }

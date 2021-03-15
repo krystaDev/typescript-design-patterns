@@ -1,14 +1,11 @@
 import {Pizza} from "../../pizza-abstract";
+import {IProductsFactory} from "../../products-factory-interface";
 
 export class ItalianVegePizza extends Pizza {
-  constructor() {
-    super();
+  constructor(factory: IProductsFactory) {
+    super(factory);
 
     this.name = 'Italian cheese pizza with sauce from tofu';
-    this.sauce = 'Sauce from tofu';
-    this.dough = 'Slight shortbread dough';
-
-    this.extras.push('Cheese from bean');
   }
 
 }

@@ -1,14 +1,18 @@
 import {Pizza} from "../../pizza-abstract";
+import {IProductsFactory} from "../../products-factory-interface";
 
 export class ItalianSeaFoodPizza extends Pizza {
-  constructor() {
-    super();
+  constructor(factory: IProductsFactory) {
+    super(factory);
 
     this.name = 'Italian sea food pizza with olive oil';
-    this.sauce = 'Olive oil';
-    this.dough = 'Slight shortbread dough';
-
-    this.extras.push('Cheese cheddar');
   }
 
+  prepare(): void {
+    console.log('Pizza is preparing');
+    this.dough = this.factory.createDough();
+    this.cheese = this.factory.createCheese();
+    this.sauce = this.factory.createSauce();
+    this.meat = this.factory.createMeats();
+  }
 }
