@@ -21,6 +21,7 @@ export abstract class Pizza {
     this.dough = this.factory.createDough();
     this.cheese = this.factory.createCheese();
     this.sauce = this.factory.createSauce();
+    this.vegetables = this.factory.createVegetables();
   }
 
   bake(): void {
