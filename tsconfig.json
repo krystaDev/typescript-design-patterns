@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "UMD",
+    "target": "ES2020",
+    "lib": ["ES2015", "DOM"],
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "removeComments": false,
+  },
+}

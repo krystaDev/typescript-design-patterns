@@ -1,13 +1,15 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+        "tslint:latest"
     ],
     "jsRules": {},
     "rules": {
         "semicolon": true,
         "no-console": false,
-        "no-empty-interface": false
+        "no-empty-interface": false,
+        "await-promise": false,
+        "no-floating-promises": false
     },
     "rulesDirectory": []
 }
