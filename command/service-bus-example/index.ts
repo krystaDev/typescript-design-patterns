@@ -1,30 +1,40 @@
 #!/usr/bin/env ts-node-script
 
 import {FrontendKafka} from "./frontend-kafka";
-import {Receiver} from "./receiver";
+import {SmsNotificationService} from "./sms-notification-service";
+import {EmailNotificationService} from "./email-notification-service";
 import {Subject} from "./subject";
 
 
-class SmsNotificationService implements Receiver {
-  receive(topic: string, subject: Subject) {
-    console.log('Sms event received', topic, subject);
-  }
-}
-
-// tslint:disable-next-line:max-classes-per-file
-class EmailNotificationService implements Receiver {
-  receive(topic: string, subject: Subject) {
-    console.log('Email event received', topic, subject);
-  }
-}
 const frontendKafka = new FrontendKafka();
 const smsService = new SmsNotificationService();
 const emailService = new EmailNotificationService();
 
-frontendKafka.subscribe('notification', smsService);
-frontendKafka.subscribe('notification', emailService);
+frontendKafka.subscribe('user_email_change', smsService);
+frontendKafka.subscribe('user_email_change', emailService);
 
-frontendKafka.publish('notification', 'name');
+const change: Subject = {
+  id: '123',
+  source: 'API',
+  payload: {
+    email: 'nowy@adres.email'
+  }
+};
 
-frontendKafka.unsubscribe('notification', smsService);
-frontendKafka.publish('notification', 'name 2');
+frontendKafka.publish('user_email_change', change);
+
+frontendKafka.unsubscribe('user_email_change', smsService);
+
+const newChange: Subject = {
+  id: '321',
+  source: 'API',
+  payload: {
+    email: 'nowszy@adres.email'
+  }
+};
+
+frontendKafka.publish('user_email_change', newChange);
+
+// frontendKafka.subscribe('user_email_change', smsService);
+// frontendKafka.publish('user_email_change', change);
+
