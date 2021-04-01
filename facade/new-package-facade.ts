@@ -9,7 +9,6 @@ export class NewPackageFacade {
   private email = new Email();
   private label = new LabelGenerator();
 
-
   createPackage() {
     this.parcelRepo.createParcel();
     this.label.createLabelForSender();
