@@ -7,7 +7,7 @@ export class PositiveProcessor extends Processor  {
 
   public process(request: number): void {
     if (request > 0) {
-      console.log("NegativeProcessor : " + request);
+      console.log("PositiveProcessor : " + request);
     } else {
       super.process(request);
     }
